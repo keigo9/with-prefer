@@ -18,7 +18,7 @@ node train_from_directory.js
 http-server . --cors -p 8080~~
 
 ```
-node server.js
+npm run dev
 ```
 
 ブラウザの開発者ツールで、favorite_analyzer.js を貼り付け実行

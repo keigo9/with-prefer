@@ -6,7 +6,7 @@
   "main": "train_from_directory.js",
   "scripts": {
     "train": "node train_from_directory.js",
-    "start": "node favorite_analyzer.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,5 +17,8 @@
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "sharp": "^0.33.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }
