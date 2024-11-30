@@ -5,15 +5,16 @@ project/
 ├── images/
 │ ├── preferred/ # 好みの顔画像を配置
 │ └── others/ # その他の顔画像を配置
-├── train_from_directory.js
+├── src/console/train_from_directory.js
 ```
 
 ### モデルの生成
 
 ```
 npm run train
-node train_from_directory.js
 ```
+
+model フォルダが生成される
 
 ### 画像解析用のサーバーの起動
 
