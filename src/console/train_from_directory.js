@@ -199,7 +199,7 @@ async function main() {
     const othersDir = fs.existsSync("./images/others")
       ? "./images/others"
       : null;
-    const modelSavePath = "./model";
+    const modelSavePath = "/model";
 
     await trainer.trainModel(preferredDir, othersDir);
     await trainer.saveModel(modelSavePath);
