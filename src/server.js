@@ -10,7 +10,11 @@ class ImageAnalyzer {
 
   // モデルの初期化
   async initModel() {
-    this.model = await tf.loadLayersModel("file://./model/model.json");
+    try {
+      this.model = await tf.loadLayersModel("file://model/model.json");
+    } catch (error) {
+      console.error("モデルの読み込み中にエラーが発生しました:", error.message);
+    }
   }
 
   // 画像をテンソルに変換
