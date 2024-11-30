@@ -30,7 +30,7 @@ class ImageAnalyzer {
     // 画像をテンソルに変換
     let tensor = tf.node.decodeImage(new Uint8Array(response.data), 3);
 
-    console.log("Initial tensor shape:", tensor.shape);
+    // console.log("Initial tensor shape:", tensor.shape);
 
     // 最初のフレームだけを取り出す
     if (tensor.shape.length > 3) {
@@ -46,7 +46,7 @@ class ImageAnalyzer {
       .div(255.0)
       .expandDims(0);
 
-    console.log("Final tensor shape:", tensor.shape);
+    // console.log("Final tensor shape:", tensor.shape);
 
     // 形状が正しくない場合は例外をスロー
     if (tensor.shape.length !== 4) {
@@ -62,6 +62,10 @@ class ImageAnalyzer {
       const tensor = await this.preprocessImage(imageUrl);
       const prediction = await this.model.predict(tensor).data();
       tensor.dispose();
+
+      // 予測値をログ出力
+      console.log(`予測値: ${prediction[0]} for ${imageUrl}`);
+
       return prediction[0] > 0.7;
     } catch (error) {
       console.error("予測エラー:", error);
@@ -93,6 +97,8 @@ app.post("/analyze-images", async (req, res) => {
         results.push(image.id);
       }
     }
+
+    console.log("解析が完了しました");
 
     res.json({ preferredIds: results });
   } catch (error) {
