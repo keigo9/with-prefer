@@ -5,8 +5,8 @@
   "description": "Face preference analyzer using TensorFlow.js",
   "main": "train_from_directory.js",
   "scripts": {
-    "train": "node train_from_directory.js",
-    "dev": "nodemon server.js"
+    "train": "node src/console/train_from_directory.js",
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",

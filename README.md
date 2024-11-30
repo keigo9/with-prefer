@@ -9,6 +9,7 @@ project/
 ### モデルの生成
 
 ```
+npm run train
 node train_from_directory.js
 ```
 
@@ -24,6 +25,14 @@ npm run dev
 ブラウザの開発者ツールで、favorite_analyzer.js を貼り付け実行
 
 ### Chrome 拡張機能としてインストール
+
+拡張機能用ファイル使用してない
+
+- axios.min.js
+- background.js
+- content.js
+- manifest.json
+- tensorflow.min.js
 
 1. Chrome ブラウザで chrome://extensions を開く
 2. 右上の「デベロッパーモード」をオン
