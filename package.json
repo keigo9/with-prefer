@@ -1,0 +1,21 @@
+{
+  "name": "prefer-matcher",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Face preference analyzer using TensorFlow.js",
+  "main": "train_from_directory.js",
+  "scripts": {
+    "train": "node train_from_directory.js",
+    "start": "node favorite_analyzer.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow/tfjs-node": "^4.17.0",
+    "axios": "^1.7.8",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "sharp": "^0.33.2"
+  }
+}

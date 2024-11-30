@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Favorite Analyzer",
+  "version": "1.0",
+  "permissions": [],
+  "host_permissions": ["https://with.is/*", "https://cdn.with.is/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://with.is/*"],
+      "js": ["tensorflow.min.js", "axios.min.js", "content.js"]
+    }
+  ]
+}
