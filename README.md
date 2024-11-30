@@ -1,10 +1,12 @@
 # 好みの顔画像の学習させて、With で閾値を超えたらお気に入り登録する
 
+```
 project/
 ├── images/
 │ ├── preferred/ # 好みの顔画像を配置
 │ └── others/ # その他の顔画像を配置
 ├── train_from_directory.js
+```
 
 ### モデルの生成
 
