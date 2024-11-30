@@ -1,4 +1,4 @@
-#　好み画像の学習方法
+#　　好みの顔画像の学習させて、With で閾値を超えたらお気に入り登録する
 
 project/
 ├── images/
@@ -13,7 +13,7 @@ npm run train
 node train_from_directory.js
 ```
 
-### サーバーの起動
+### 画像解析用のサーバーの起動
 
 ~~npm install -g http-server
 http-server . --cors -p 8080~~
@@ -22,7 +22,7 @@ http-server . --cors -p 8080~~
 npm run dev
 ```
 
-ブラウザの開発者ツールで、favorite_analyzer.js を貼り付け実行
+一覧ページのブラウザの開発者ツールで、favorite_analyzer.js を貼り付け実行
 
 ### Chrome 拡張機能としてインストール
 
